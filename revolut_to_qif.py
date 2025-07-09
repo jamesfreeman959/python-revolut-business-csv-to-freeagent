@@ -28,8 +28,8 @@ def convert_csv_to_qif(csv_file, verbose=False):
                 date_obj = datetime.strptime(date_str, '%Y-%m-%d')
                 qif_date = date_obj.strftime('%m/%d/%Y')
                 
-                # Get amount (use Payment currency amount)
-                amount = float(row['Amount'])
+                # Get amount (use Total amount)
+                amount = float(row['Total amount'])
                 
                 # Get description
                 description = row['Description']
